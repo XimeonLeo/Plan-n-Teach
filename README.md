@@ -19,10 +19,10 @@ As this will be the final portfolio project for our backend specialization, we'l
 Team members include
 	1. Heritage Adeleke
 [github](https://github.com/Adetops)
-[gmail](heritagediwamu@gmail.com)
+gmail - heritagediwamu@gmail.com
 	2. Simeon Onabowale
 [github](https://github.com/XimeonLeo)
-[gmail](ximeonleo@gmail.com)
+gmail - ximeonleo@gmail.com
 
 
 ## TECHNOLOGIES USED
