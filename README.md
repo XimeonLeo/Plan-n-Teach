@@ -18,10 +18,10 @@ The solution covers:
 As this will be the final portfolio project for our backend specialization, we'll focus majorly on the back end aspect.
 Team members include
 	1. Heritage Adeleke
-[github](https://github.com/Adetops)
+[github](https://github.com/Adetops),
 gmail - heritagediwamu@gmail.com
 	2. Simeon Onabowale
-[github](https://github.com/XimeonLeo)
+[github](https://github.com/XimeonLeo),
 gmail - ximeonleo@gmail.com
 
 
@@ -36,3 +36,19 @@ gmail - ximeonleo@gmail.com
 
 ![img](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step5.png)
 
+
+## CHALLENGES FACED
+
+1. Scalability and Performance
+
+2. User interface complexity
+
+3. System inter-operations
+
+4. Plan and context variations
+
+5. Testing and validation
+
+6. Project and scope management
+
+7. User acceptance and adoption
