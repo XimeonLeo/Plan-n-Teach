@@ -43,3 +43,14 @@ def upload_file():
     file.save('uploads/' + file.filename)
     flash('File uploaded successfully', category='success')
     return render_template('upload.html', user=current_user)
+
+@views.route('/delete-note', methods=['POST'])
+def deleteNote():
+  note = json.loads(request.data)
+  note_id = note['note_id']
+  note = Note.query.get(note_id)
+  if note:
+    if note.user_id == current_user.id:
+      db.session.delete(note)
+      db.session.commit()
+      return jsonify({})
