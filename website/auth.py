@@ -32,6 +32,7 @@ def login():
 @login_required
 def logout():
   logout_user()
+  flash('Logged out successfully!', category='success')
   return redirect(url_for('auth.login'))
 
 
@@ -63,8 +64,8 @@ def signUp():
                       password=generate_password_hash(password, method='pbkdf2:sha256'))
       db.session.add(new_user)
       db.session.commit()
-      flash('Account created!', category='success')
       login_user(user, remember=True)
+      flash('Account created!', category='success')
       return redirect(url_for('views.homePage'))
 
   return render_template("signup.html", user=current_user)
