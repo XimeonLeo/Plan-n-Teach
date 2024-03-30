@@ -1,3 +1,4 @@
+// function that deletes a note
 async function deleteNote(note_id) {
   // Confirm deletion with the user
   if (confirm('Are you sure you want to delete this note?')) {
@@ -23,8 +24,6 @@ async function deleteNote(note_id) {
     }
   }
 }
-
-
 
 // Select element function
 const selectElement = function (element) {

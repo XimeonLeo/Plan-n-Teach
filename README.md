@@ -52,3 +52,23 @@ gmail - ximeonleo@gmail.com
 6. Project and scope management
 
 7. User acceptance and adoption
+
+## HOW TO RUN PLAN AND TEACH
+
+### Things to install
+
+```
+$ pip install flask-login
+$ pip install Flask-Uploads
+$ pip install Flask-SQLAlchemy
+$ pip install Flask-Bcrypt
+
+```
+
+##After installation
+##execute the main.py file
+```
+$ python3 main.py
+```
+
+Then click on the generated link
