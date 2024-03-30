@@ -1,10 +1,11 @@
 """ Standard routes for Plan'N'Teach """
 
-from flask import Blueprint, render_template, request, flash
+from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
 from .models import Note, User
 from . import db
 from os import path, makedirs
+import json
 
 
 views = Blueprint('views', __name__)
