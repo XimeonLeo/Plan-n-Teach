@@ -58,15 +58,17 @@ gmail - ximeonleo@gmail.com
 ### Things to install
 
 ```
-pip install flask-login
-pip install Flask-Uploads
-pip install Flask-SQLAlchemy
-pip install Flask-Bcrypt
+$ pip install flask-login
+$ pip install Flask-Uploads
+$ pip install Flask-SQLAlchemy
+$ pip install Flask-Bcrypt
 
 ```
 
-###After installation
-###execute the main.py file
+##After installation
+##execute the main.py file
+```
 $ python3 main.py
+```
 
 Then click on the generated link
