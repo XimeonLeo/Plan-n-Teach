@@ -9,7 +9,7 @@
 }
 
 :root {
-  --main-font: 'Times New Roman';
+  --main-font: 'Bookman Old Style';
   --secondary-font: 'Herr Von Muellerhoff', cursive;
   --body-font: 'Britannic';
   --main-font-colour: #252525;
@@ -24,18 +24,24 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section {
   padding: 4rem 0;
+  overflow: hidden;
 }
 
 img {
   width: 100%;
-  max-width: 100%;
+  min-width: 100%;
 }
 
 .logo {
-  margin: 20rem;
+  margin: 5rem 20rem 0 0;
 }
+
 a {
   text-decoration: none;
 }
@@ -161,12 +167,15 @@ header {
 }
 
 .sub-headline {
-  font-size: 9rem;
+  font-size: 8.5rem;
   font-family: var(--secondary-font);
   color: var(--secondary-font-colour);
   font-weight: 300;
   line-height: .4;
   letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeUp .5s forwards;
+  animation-delay: .4s;
 }
 
 .first-letter {
@@ -175,13 +184,15 @@ header {
 }
 
 .headline {
-  color: rgb(26, 235, 26);
-  font-size: 2rem;
+  color: rgb(223, 21, 230);
+  font-size: 3rem;
   font-family: var(--main-font);
   text-transform: uppercase;
-  font-weight: 1000;
+  font-weight: 900;
   letter-spacing: .5rem;
   margin-right: -.5rem;
+  /* opacity: 0; */
+  animation: scale .5s forwards;
 }
 
 .separator {
@@ -196,6 +207,9 @@ header {
   height: .25rem;
   background-color: #fff;
   position: relative;
+  opacity: 0;
+  animation: grow 2s forwards;
+  animation-delay: .8s;
 }
 
 .line-right::before,
@@ -205,7 +219,9 @@ header {
   top: 50%;
   transform: translateY(-50%);
   border: .6rem solid transparent;
-  /* border-right-color: white; */
+  opacity: 0;
+  animation: grow .5s forwards;
+  animation-delay: 1.4s;
 }
 
 .line-right::before {
@@ -222,6 +238,15 @@ header {
   font-size: 1.2rem;
   color: var(--secondary-font-colour);
   margin: 0 1.6rem;
+  opacity: 0;
+  animation: spin .5s forwards;
+  animation-delay: .7s;
+}
+
+.single-animation {
+  opacity: 0;
+  animation: fadeDown .5s forwards;
+  animation-delay: 1.5s;
 }
 
 .headline-description h4 {
@@ -651,6 +676,7 @@ footer {
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: translateY(-1rem);
