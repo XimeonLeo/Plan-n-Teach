@@ -1,14 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="images/Plan'n'Teach.png">
+  <link rel="icon" type="image/x-icon" href="../static/images/Plan'n'Teach.png">
   <title>Plan'N'Teach</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://unpkg.com/scrollreveal"></script>
-  <link rel="stylesheet" href="styles/landing.css">
+  <link rel="stylesheet" href="../static/styles/landing_page.css">
+
+  <title>{% block title %}Home{% endblock %}</title>
 </head>
 <body>
   <!-- header starts -->
@@ -19,31 +20,28 @@
           <i class="fas fa-bars"></i>
           <i class="fas fa-times"></i>
         </div>
-        <a href="landing_page.html" class="logo"><img src="images/Plan'n'Teach.png" alt="logo"></a>
+        <a href="landing_page.html" class="logo"><img src="../static/images/Plan'n'Teach.png" alt="logo"></a>
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="landing_page.html" class="nav-link">Home</a>
+            <a href="/" class="nav-link active" id="landing_page">Home</a>
           </li>
           <li class="nav-item">
-            <a href="login.html" class="nav-link">Login</a>
+            <a href="/login" class="nav-link active" id="login">Login</a>
           </li>
           <li class="nav-item">
-            <a href="signup.html" class="nav-link">Sign-up</a>
+            <a href="/logout" class="nav-link active" id="logout">Logout</a>
           </li>
           <li class="nav-item">
-            <a href="homepage" class="nav-link">Dashboard</a>
+            <a href="/sign_up" class="nav-link active" id="signUp">Sign-up</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Contact</a>
+            <a href="/dashboard" class="nav-link active" id="homePage">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Menu</a>
+            <a href="#media" class="nav-link active">Contact</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Our Services</a>
+            <a href="#about" class="nav-link active">About</a>
           </li>
         </ul>
       </nav>
@@ -64,21 +62,22 @@
         </div>
         <div class="single-animation">
           <h4>Ready to plan</h4>
-          <a href="#" class="btn cta-btn">Explore</a>
+          <a href="#our-story" class="btn cta-btn">Explore</a>
         </div>
       </div>
     </div>
   </section>
   <!-- hero ends -->
-  <section class="discover-our-story">
+  <section class="discover-our-story" id="our-story">
     <div class="container">
-      <div class="info">
-        <div class="description padding-right animate-left">
+      <div class="pnt-info">
+        <div class="pnt-description padding-right animate-left">
           <div class="global-headline">
             <h2 class="sub-headline">
               <span class="first-letter">D</span>iscover
             </h2>
             <h1 class="headline headline-dark">Our Story</h1>
+            <div class="asterisk"><i class="fas fa-asterisk"></i></div>
           </div>
           <p>
             Plan'N'Teach is a user-friendly and comprehensive Education Management System
@@ -88,17 +87,137 @@
              arms of education including primary / secondary school subjects and university 
              courses encompassing all topics and concepts under each subject/course.
           </p>
-          <a href="#" class="btn body-btn">About</a>
+          <a href="#about" class="btn body-btn">About</a>
         </div>
         <div class="info-img animate-right">
-          <img src="./images/our-story1.jpeg" alt="">
+          <img src="../static/images/our-story1.jpeg" alt="">
         </div>
       </div>
     </div>
   </section>
+  <!-- Discover our story ends here -->
+  <section class="recipes btw" id="solutions">
+    <div class="container">
+      <div class="global-headline">
+        <div class="animate-top">
+          <h2 class="sub-headline">
+            <span class="first-letter">T</span>ailored
+          </h2>
+        </div>
+        <div class="animate-bottom">
+          <h1 class="headline">Solutions</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Recipes ends here -->
+  <section class="subject-lists" id="lists">
+    <div class="container">
+      <div class="pnt-info">
+        <div class="image-group padding-right animate-left">
+          <img src="../static/images/Mathematics.png" alt="Mathematics">
+          <img src="../static/images/Mathematics2.png" alt="Physics">
+          <img src="../static/images/F.Mathematics.png" alt="English Language">
+          <img src="../static/images/F.Mathematics2.png" alt="Further Mathematics">
+        </div>
+        <div class="pnt-description animate-right" id="list">
+          <div class="global-headline">
+            <h2 class="sub-headline">
+              <span class="first-letter">D</span>iscover
+            </h2>
+            <h1 class="headline headline-dark">Lists</h1>
+            <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+          </div>
+          <div class="subject-list">
+            <ul>
+              <li>Mathematics</li>
+              <li>English Language</li>
+              <li>Physics</li>
+              <li>Chemistry</li>
+            </ul>
+            <ul>
+              <li>Data Processing</li>
+              <li>Biology</li>
+              <li>Lit-in-English</li>
+              <li>Geography</li>
+            </ul>
+            <ul>
+              <li>Basic Science</li>
+              <li>Government</li>
+              <li>Marketing</li>
+              <li>Further Mathematics</li>
+            </ul>
+          </div> <br>
+          <a href="#list" class="btn body-btn">View the full list</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Discover subject list ends -->
+  <section class="perfect-blend btw">
+    <div class="container">
+      <div class="global-headline">
+        <div class="animate-top">
+          <h2 class="sub-headline">
+            <span class="first-letter">T</span>he perfect
+          </h2>
+        </div>
+        <div class="animate-bottom">
+          <h1 class="headline">Blend</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Perfect blend ends  -->
   <footer>
-
+    <div class="container">
+      <div class="back-to-top">
+        <a href="#hero"><i class="fas fa-chevron-up"></i></a>
+      </div>
+      <div class="footer-content">
+        <div class="footer-about animate-top" id="about">
+          <h4>About Plan'n'Teach</h4>
+          <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+          <p>
+            Plan'N'Teach is a user-friendly and comprehensive Education Management System
+           software solution set out on the mission to relieve stress, save time, energy, 
+           help with early preparation for classes and so much more
+          </p>
+        </div>
+        <div class="footer-divider animate-bottom">
+          <div class="social-media" id="media">
+            <h4>Follow along</h4>
+            <ul class="social-icons">
+              <li>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/heritage-adeleke-278852248/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="newsletter-container">
+            <h4>Newsletter</h4>
+            <form action="" class="newsletter-form">
+              <input type="text" class="newsletter-input" placeholder="Your email address...">
+              <button class="newsletter-btn" type="submit">
+                <i class="fas fa-envelope"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
-  <script src="main.js"></script>
+  <script src="../static/index.js"></script>
 </body>
 </html>
