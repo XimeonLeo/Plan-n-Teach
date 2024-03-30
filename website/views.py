@@ -10,6 +10,11 @@ from os import path, makedirs
 views = Blueprint('views', __name__)
 
 @views.route('/', methods=['GET', 'POST'])
+def landing_page():
+  return render_template("landing_page.html")
+
+
+@views.route('/dashboard', methods=['GET', 'POST'])
 @login_required
 def homePage():
   if request.method == 'POST':
@@ -24,6 +29,7 @@ def homePage():
       flash('Note added!', category='success')
     
   return render_template("home.html", user=current_user)
+
 
 def ensure_dir_exists(directory_name=''):
   if not path.exists(directory_name):
