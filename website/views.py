@@ -32,25 +32,6 @@ def homePage():
   return render_template("home.html", user=current_user)
 
 
-def ensure_dir_exists(directory_name=''):
-  if not path.exists(directory_name):
-    makedirs(directory_name)
-
-# Route for admin to upload files
-@views.route('/upload_file', methods=['GET', 'POST'])
-@login_required
-def upload_file():
-  if not current_user.is_admin:
-    flash('Access Denied: Admin privilege required', category='error')
-    return render_template('home.html', user=current_user)
- 
-  if request.method == 'POST' and 'file' in request.files:
-    ensure_dir_exists('uploads')
-    file = request.files['file']
-    file.save('uploads/' + file.filename)
-    flash('File uploaded successfully', category='success')
-    return render_template('upload.html', user=current_user)
-
 @views.route('/delete-note', methods=['POST'])
 def deleteNote():
   note = json.loads(request.data)
@@ -61,3 +42,23 @@ def deleteNote():
       db.session.delete(note)
       db.session.commit()
       return jsonify({})
+    
+    
+    # def ensure_dir_exists(directory_name=''):
+#   if not path.exists(directory_name):
+#     makedirs(directory_name)
+
+# # Route for admin to upload files
+# @views.route('/upload_file', methods=['GET', 'POST'])
+# @login_required
+# def upload_file():
+#   if not current_user.is_admin:
+#     flash('Access Denied: Admin privilege required', category='error')
+#     return render_template('home.html', user=current_user)
+ 
+#   if request.method == 'POST' and 'file' in request.files:
+#     ensure_dir_exists('uploads')
+#     file = request.files['file']
+#     file.save('uploads/' + file.filename)
+#     flash('File uploaded successfully', category='success')
+#     return render_template('upload.html', user=current_user)
