@@ -1,6 +1,6 @@
 # Plan-n-Teach
 
-## DISCRIPTION, AIMS AND OBJECTIVES
+## DESCRIPTION, AIMS AND OBJECTIVES
 
 The **primary objective** of this project is to develop a user-friendly and comprehensive **"Education Management System** software solution that can address the needs of academic personnels which includes but not limited to:
 	1. teachers
@@ -28,10 +28,10 @@ gmail - ximeonleo@gmail.com
 ## TECHNOLOGIES USED
 
 	1. Python (Backend)
-	2. MySQL (Database)
+	2. SQLAlchemy (Database)
 	3. Flask framework
 	4. HTML
-	5. JaveScript
+	5. JavaScript
 
 
 ![img](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step5.png)
@@ -47,7 +47,7 @@ gmail - ximeonleo@gmail.com
 
 4. Plan and context variations
 
-5. Testing and validation
+5. Testing and Debugging
 
 6. Project and scope management
 
